@@ -1,0 +1,168 @@
+:root {
+    font-family: Outfit, sans-serif;
+    font-size: 16px;
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main: hsl(217, 54%, 11%); /* main BG */
+    --very-dark-blue-card: hsl(216, 50%, 16%); /* card BG */
+    --very-dark-blue-line:  hsl(215, 32%, 27%); /* line */
+    --white: hsl(0, 0%, 100%);
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 1.125em;
+    background: var(--very-dark-blue-main);
+}
+
+main {
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+}
+
+.card {
+    max-width: 285px;
+    min-width: 267px;
+    padding: 1em;
+    border-radius: .8em;
+    font-weight: 300;
+    color: var(--soft-blue);
+    background: var(--very-dark-blue-card);
+}
+
+.card .photo {
+    border-radius: .6em;
+}
+
+.card-photo {
+    position: relative;
+}
+
+.card-photo img {
+    display: block;
+}
+
+.card-photo .mask {
+    /* display: block; */
+    position: absolute;
+    width: 100%;
+    border-radius: .6em;
+    object-fit: none;
+    background-color: hsla(178, 100%, 50%, .4);
+    opacity: 0;
+    transition: opacity .3s ease-in;
+}
+
+.card-photo:hover .mask {
+    opacity: 1;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.card h2:hover {
+    color: var(--cyan);
+}
+
+.card .data::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.card .data-eth {
+    float: left;
+    text-indent: 1.2em;
+    font-weight: 400;
+    color: var(--cyan);
+    background: url('../images/icon-ethereum.svg') no-repeat left;
+}
+
+.card .data-deadline {
+    float: right;
+    text-indent: 1.2em;
+    background: url('../images/icon-clock.svg') no-repeat left 70%;
+}
+
+.card hr {
+    margin: 1em 0;
+    border-bottom: none;
+    border-color: var(--soft-blue);
+}
+
+.card .creator-msg {
+    display: flex;
+    align-items: center;
+    font-size: .9em;
+}
+
+.card .avatar {
+    width: 2em;
+    height: 2em;
+    margin-right: 1em;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.card .creator {
+    color: var(--white);
+}
+
+.card .creator:hover {
+    color: var(--cyan);
+}
+
+.card .creator-msg > p {
+    margin: .6em 0;
+}
+
+/* outfit-300 */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    src: url('//lib.baomitu.com/fonts/outfit/outfit-300.eot'); /* IE9 Compat Modes */
+    src: local('Outfit'), local('Outfit-Normal'),
+         url('//lib.baomitu.com/fonts/outfit/outfit-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('//lib.baomitu.com/fonts/outfit/outfit-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('//lib.baomitu.com/fonts/outfit/outfit-300.woff') format('woff'), /* Modern Browsers */
+         url('//lib.baomitu.com/fonts/outfit/outfit-300.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('//lib.baomitu.com/fonts/outfit/outfit-300.svg#Outfit') format('svg'); /* Legacy iOS */
+  }
+    
+  /* outfit-regular */
+  @font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: regular;
+    src: url('//lib.baomitu.com/fonts/outfit/outfit-regular.eot'); /* IE9 Compat Modes */
+    src: local('Outfit'), local('Outfit-Normal'),
+         url('//lib.baomitu.com/fonts/outfit/outfit-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('//lib.baomitu.com/fonts/outfit/outfit-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('//lib.baomitu.com/fonts/outfit/outfit-regular.woff') format('woff'), /* Modern Browsers */
+         url('//lib.baomitu.com/fonts/outfit/outfit-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('//lib.baomitu.com/fonts/outfit/outfit-regular.svg#Outfit') format('svg'); /* Legacy iOS */
+  }
+    
+  /* outfit-600 */
+  @font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    src: url('//lib.baomitu.com/fonts/outfit/outfit-600.eot'); /* IE9 Compat Modes */
+    src: local('Outfit'), local('Outfit-Normal'),
+         url('//lib.baomitu.com/fonts/outfit/outfit-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('//lib.baomitu.com/fonts/outfit/outfit-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('//lib.baomitu.com/fonts/outfit/outfit-600.woff') format('woff'), /* Modern Browsers */
+         url('//lib.baomitu.com/fonts/outfit/outfit-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('//lib.baomitu.com/fonts/outfit/outfit-600.svg#Outfit') format('svg'); /* Legacy iOS */
+  }
+    
